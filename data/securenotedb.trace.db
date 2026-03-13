@@ -1,0 +1,670 @@
+2026-03-13 23:36:47.004462+06:00 database: opening F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb (build 232)
+2026-03-13 23:36:47.099458+06:00 lock: 1 exclusive requesting for SYS 
+2026-03-13 23:36:47.099458+06:00 lock: 1 exclusive added for SYS 
+2026-03-13 23:36:47.101460+06:00 lock: 1 exclusive unlock SYS 
+2026-03-13 23:36:47.103459+06:00 lock: 1 exclusive requesting for SYS 
+2026-03-13 23:36:47.103459+06:00 lock: 1 exclusive added for SYS 
+2026-03-13 23:36:47.118458+06:00 lock: 1 exclusive unlock SYS 
+2026-03-13 23:36:47.119421+06:00 database: opened F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:36:47.121457+06:00 lock: 1 exclusive requesting for SYS 
+2026-03-13 23:36:47.121457+06:00 lock: 1 exclusive added for SYS 
+2026-03-13 23:36:47.124456+06:00 lock: 1 exclusive unlock SYS 
+2026-03-13 23:36:47.124456+06:00 database: connecting session #3 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:36:47.219449+06:00 jdbc[3]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:36:47.219449+06:00 jdbc[3]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:36:47.221417+06:00 jdbc[3]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:36:47.221417+06:00 jdbc[3]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:36:47.222415+06:00 jdbc[3]: 
+/**/Connection conn0 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:36:47.223415+06:00 jdbc[3]: 
+/**/conn0.isReadOnly();
+2026-03-13 23:36:47.228417+06:00 jdbc[3]: 
+/*SQL #:1 t:1*/CALL READONLY();
+2026-03-13 23:36:47.229415+06:00 jdbc[3]: 
+/**/conn0.getAutoCommit();
+2026-03-13 23:36:47.232452+06:00 jdbc[3]: 
+/**/conn0.isValid(5);
+2026-03-13 23:36:47.232452+06:00 jdbc[3]: 
+/**/conn0.getTransactionIsolation();
+2026-03-13 23:36:47.232452+06:00 jdbc[3]: 
+/**/conn0.getTransactionIsolation();
+2026-03-13 23:36:47.250413+06:00 jdbc[3]: 
+/**/DatabaseMetaData dbMeta0 = conn0.getMetaData();
+2026-03-13 23:36:47.257447+06:00 jdbc[3]: 
+/**/dbMeta0.getDatabaseProductName();
+2026-03-13 23:36:47.257447+06:00 jdbc[3]: 
+/**/dbMeta0.getDatabaseProductVersion();
+2026-03-13 23:36:47.258449+06:00 jdbc[3]: 
+/**/dbMeta0.getDatabaseMajorVersion();
+2026-03-13 23:36:47.258449+06:00 jdbc[3]: 
+/**/dbMeta0.getDatabaseMinorVersion();
+2026-03-13 23:36:47.258449+06:00 jdbc[3]: 
+/**/dbMeta0.getDatabaseProductVersion();
+2026-03-13 23:36:47.259413+06:00 jdbc[3]: 
+/**/dbMeta0.getDatabaseMajorVersion();
+2026-03-13 23:36:47.259413+06:00 jdbc[3]: 
+/**/dbMeta0.getDatabaseMinorVersion();
+2026-03-13 23:36:47.260413+06:00 jdbc[3]: 
+/**/dbMeta0.getDriverName();
+2026-03-13 23:36:47.260413+06:00 jdbc[3]: 
+/**/dbMeta0.getDriverMajorVersion();
+2026-03-13 23:36:47.260413+06:00 jdbc[3]: 
+/**/dbMeta0.getDriverMinorVersion();
+2026-03-13 23:36:47.261413+06:00 jdbc[3]: 
+/**/dbMeta0.getSQLKeywords();
+2026-03-13 23:36:47.298446+06:00 jdbc[3]: 
+/**/dbMeta0.supportsCatalogsInTableDefinitions();
+2026-03-13 23:36:47.298446+06:00 jdbc[3]: 
+/**/dbMeta0.supportsSchemasInTableDefinitions();
+2026-03-13 23:36:47.299446+06:00 jdbc[3]: 
+/**/dbMeta0.storesLowerCaseIdentifiers();
+2026-03-13 23:36:47.300410+06:00 jdbc[3]: 
+/**/dbMeta0.storesUpperCaseIdentifiers();
+2026-03-13 23:36:47.300410+06:00 jdbc[3]: 
+/**/dbMeta0.storesMixedCaseIdentifiers();
+2026-03-13 23:36:47.300410+06:00 jdbc[3]: 
+/**/dbMeta0.storesUpperCaseIdentifiers();
+2026-03-13 23:36:47.300410+06:00 jdbc[3]: 
+/**/dbMeta0.storesLowerCaseQuotedIdentifiers();
+2026-03-13 23:36:47.300410+06:00 jdbc[3]: 
+/**/dbMeta0.storesUpperCaseQuotedIdentifiers();
+2026-03-13 23:36:47.301411+06:00 jdbc[3]: 
+/**/dbMeta0.storesMixedCaseQuotedIdentifiers();
+2026-03-13 23:36:47.303444+06:00 jdbc[3]: 
+/**/conn0.getCatalog();
+2026-03-13 23:36:47.306446+06:00 jdbc[3]: 
+/*SQL #:1*/CALL DATABASE();
+2026-03-13 23:36:47.307434+06:00 jdbc[3]: 
+/**/dbMeta0.supportsNamedParameters();
+2026-03-13 23:36:47.307434+06:00 jdbc[3]: 
+/**/dbMeta0.supportsResultSetType(1004);
+2026-03-13 23:36:47.307434+06:00 jdbc[3]: 
+/**/dbMeta0.supportsGetGeneratedKeys();
+2026-03-13 23:36:47.308410+06:00 jdbc[3]: 
+/**/dbMeta0.supportsBatchUpdates();
+2026-03-13 23:36:47.308410+06:00 jdbc[3]: 
+/**/dbMeta0.dataDefinitionIgnoredInTransactions();
+2026-03-13 23:36:47.309412+06:00 jdbc[3]: 
+/**/dbMeta0.dataDefinitionCausesTransactionCommit();
+2026-03-13 23:36:47.309412+06:00 jdbc[3]: 
+/**/dbMeta0.getSQLStateType();
+2026-03-13 23:36:47.311411+06:00 jdbc[3]: 
+/**/conn0.getSchema();
+2026-03-13 23:36:47.312410+06:00 jdbc[3]: 
+/**/conn0.getSchema();
+2026-03-13 23:36:47.312410+06:00 jdbc[3]: 
+/**/dbMeta0.supportsNamedParameters();
+2026-03-13 23:36:47.315446+06:00 jdbc[3]: 
+/**/dbMeta0.getCatalogSeparator();
+2026-03-13 23:36:47.315446+06:00 jdbc[3]: 
+/**/dbMeta0.isCatalogAtStart();
+2026-03-13 23:36:47.321411+06:00 jdbc[3]: 
+/**/DatabaseMetaData dbMeta1 = conn0.getMetaData();
+2026-03-13 23:36:47.322411+06:00 jdbc[3]: 
+/**/dbMeta1.getJDBCMajorVersion();
+2026-03-13 23:36:47.324410+06:00 jdbc[3]: 
+/**/Clob clob0 = conn0.createClob();
+2026-03-13 23:36:47.329412+06:00 jdbc[3]: 
+/**/clob0.free();
+2026-03-13 23:36:47.329412+06:00 jdbc[3]: 
+/**/NClob clob1 = conn0.createNClob();
+2026-03-13 23:36:47.329412+06:00 jdbc[3]: 
+/**/clob1.free();
+2026-03-13 23:36:47.338411+06:00 jdbc[3]: 
+/**/conn0.clearWarnings();
+2026-03-13 23:36:47.348409+06:00 database: connecting session #4 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:36:47.349410+06:00 jdbc[4]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:36:47.350409+06:00 jdbc[4]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:36:47.351409+06:00 jdbc[4]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:36:47.351409+06:00 jdbc[4]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:36:47.352409+06:00 jdbc[4]: 
+/**/Connection conn1 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:36:47.356408+06:00 jdbc[4]: 
+/**/conn1.isReadOnly();
+2026-03-13 23:36:47.357408+06:00 jdbc[4]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:36:47.357408+06:00 jdbc[4]: 
+/**/conn1.getAutoCommit();
+2026-03-13 23:36:47.391407+06:00 database: connecting session #5 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:36:47.391407+06:00 jdbc[5]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:36:47.393408+06:00 jdbc[5]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:36:47.396407+06:00 jdbc[5]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:36:47.399407+06:00 jdbc[5]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:36:47.401407+06:00 jdbc[5]: 
+/**/Connection conn2 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:36:47.401407+06:00 jdbc[5]: 
+/**/conn2.isReadOnly();
+2026-03-13 23:36:47.401407+06:00 jdbc[5]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:36:47.404405+06:00 jdbc[5]: 
+/**/conn2.getAutoCommit();
+2026-03-13 23:36:47.443404+06:00 database: connecting session #6 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:36:47.444403+06:00 jdbc[6]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:36:47.445403+06:00 jdbc[6]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:36:47.446403+06:00 jdbc[6]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:36:47.448403+06:00 jdbc[6]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:36:47.449402+06:00 jdbc[6]: 
+/**/Connection conn3 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:36:47.449402+06:00 jdbc[6]: 
+/**/conn3.isReadOnly();
+2026-03-13 23:36:47.449402+06:00 jdbc[6]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:36:47.449402+06:00 jdbc[6]: 
+/**/conn3.getAutoCommit();
+2026-03-13 23:36:47.482399+06:00 database: connecting session #7 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:36:47.482399+06:00 jdbc[7]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:36:47.482399+06:00 jdbc[7]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:36:47.483400+06:00 jdbc[7]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:36:47.483400+06:00 jdbc[7]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:36:47.483400+06:00 jdbc[7]: 
+/**/Connection conn4 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:36:47.483400+06:00 jdbc[7]: 
+/**/conn4.isReadOnly();
+2026-03-13 23:36:47.484399+06:00 jdbc[7]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:36:47.484399+06:00 jdbc[7]: 
+/**/conn4.getAutoCommit();
+2026-03-13 23:36:47.519398+06:00 database: connecting session #8 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:36:47.519398+06:00 jdbc[8]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:36:47.520398+06:00 jdbc[8]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:36:47.520398+06:00 jdbc[8]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:36:47.521397+06:00 jdbc[8]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:36:47.521397+06:00 jdbc[8]: 
+/**/Connection conn5 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:36:47.521397+06:00 jdbc[8]: 
+/**/conn5.isReadOnly();
+2026-03-13 23:36:47.522399+06:00 jdbc[8]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:36:47.522399+06:00 jdbc[8]: 
+/**/conn5.getAutoCommit();
+2026-03-13 23:36:47.554397+06:00 database: connecting session #9 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:36:47.555396+06:00 jdbc[9]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:36:47.556396+06:00 jdbc[9]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:36:47.557396+06:00 jdbc[9]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:36:47.558396+06:00 jdbc[9]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:36:47.558396+06:00 jdbc[9]: 
+/**/Connection conn6 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:36:47.561395+06:00 jdbc[9]: 
+/**/conn6.isReadOnly();
+2026-03-13 23:36:47.561395+06:00 jdbc[9]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:36:47.562397+06:00 jdbc[9]: 
+/**/conn6.getAutoCommit();
+2026-03-13 23:36:47.604394+06:00 database: connecting session #10 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:36:47.619393+06:00 jdbc[10]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:36:47.620394+06:00 jdbc[10]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:36:47.620394+06:00 jdbc[10]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:36:47.622393+06:00 jdbc[10]: 
+/*SQL t:1*/SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:36:47.623392+06:00 jdbc[10]: 
+/**/Connection conn7 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:36:47.623392+06:00 jdbc[10]: 
+/**/conn7.isReadOnly();
+2026-03-13 23:36:47.624393+06:00 jdbc[10]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:36:47.628392+06:00 jdbc[10]: 
+/**/conn7.getAutoCommit();
+2026-03-13 23:36:47.663390+06:00 database: connecting session #11 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:36:47.665391+06:00 jdbc[11]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:36:47.666391+06:00 jdbc[11]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:36:47.668391+06:00 jdbc[11]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:36:47.669390+06:00 jdbc[11]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:36:47.670392+06:00 jdbc[11]: 
+/**/Connection conn8 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:36:47.671389+06:00 jdbc[11]: 
+/**/conn8.isReadOnly();
+2026-03-13 23:36:47.672390+06:00 jdbc[11]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:36:47.673391+06:00 jdbc[11]: 
+/**/conn8.getAutoCommit();
+2026-03-13 23:36:47.705386+06:00 database: connecting session #12 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:36:47.706387+06:00 jdbc[12]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:36:47.706387+06:00 jdbc[12]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:36:47.706387+06:00 jdbc[12]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:36:47.706387+06:00 jdbc[12]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:36:47.707386+06:00 jdbc[12]: 
+/**/Connection conn9 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:36:47.707386+06:00 jdbc[12]: 
+/**/conn9.isReadOnly();
+2026-03-13 23:36:47.707386+06:00 jdbc[12]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:36:47.707386+06:00 jdbc[12]: 
+/**/conn9.getAutoCommit();
+2026-03-13 23:36:48.572368+06:00 jdbc[3]: 
+/**/conn0.isValid(5);
+2026-03-13 23:36:48.572368+06:00 jdbc[3]: 
+/**/conn0.getTransactionIsolation();
+2026-03-13 23:36:48.573368+06:00 jdbc[3]: 
+/**/DatabaseMetaData dbMeta2 = conn0.getMetaData();
+2026-03-13 23:36:48.573368+06:00 jdbc[3]: 
+/**/dbMeta2.getURL();
+2026-03-13 23:36:48.573368+06:00 jdbc[3]: 
+/**/conn0.clearWarnings();
+2026-03-13 23:38:18.366848+06:00 jdbc[3]: 
+/**/conn0.isClosed();
+2026-03-13 23:38:18.367849+06:00 jdbc[3]: 
+/**/conn0.close();
+2026-03-13 23:38:18.367849+06:00 lock: 3 shared read unlock SYS 
+2026-03-13 23:38:18.367849+06:00 database: disconnecting session #3
+2026-03-13 23:38:18.368848+06:00 database: disconnected session #3
+2026-03-13 23:38:18.368848+06:00 jdbc[4]: 
+/**/conn1.isClosed();
+2026-03-13 23:38:18.368848+06:00 jdbc[4]: 
+/**/conn1.close();
+2026-03-13 23:38:18.369848+06:00 lock: 4 shared read unlock SYS 
+2026-03-13 23:38:18.369848+06:00 database: disconnecting session #4
+2026-03-13 23:38:18.369848+06:00 database: disconnected session #4
+2026-03-13 23:38:18.369848+06:00 jdbc[5]: 
+/**/conn2.isClosed();
+2026-03-13 23:38:18.369848+06:00 jdbc[5]: 
+/**/conn2.close();
+2026-03-13 23:38:18.370847+06:00 lock: 5 shared read unlock SYS 
+2026-03-13 23:38:18.370847+06:00 database: disconnecting session #5
+2026-03-13 23:38:18.370847+06:00 database: disconnected session #5
+2026-03-13 23:38:18.371848+06:00 jdbc[6]: 
+/**/conn3.isClosed();
+2026-03-13 23:38:18.371848+06:00 jdbc[6]: 
+/**/conn3.close();
+2026-03-13 23:38:18.371848+06:00 lock: 6 shared read unlock SYS 
+2026-03-13 23:38:18.371848+06:00 database: disconnecting session #6
+2026-03-13 23:38:18.373849+06:00 database: disconnected session #6
+2026-03-13 23:38:18.373849+06:00 jdbc[7]: 
+/**/conn4.isClosed();
+2026-03-13 23:38:18.374849+06:00 jdbc[7]: 
+/**/conn4.close();
+2026-03-13 23:38:18.374849+06:00 lock: 7 shared read unlock SYS 
+2026-03-13 23:38:18.374849+06:00 database: disconnecting session #7
+2026-03-13 23:38:18.384847+06:00 database: disconnected session #7
+2026-03-13 23:38:18.385847+06:00 jdbc[8]: 
+/**/conn5.isClosed();
+2026-03-13 23:38:18.386847+06:00 jdbc[8]: 
+/**/conn5.close();
+2026-03-13 23:38:18.387846+06:00 lock: 8 shared read unlock SYS 
+2026-03-13 23:38:18.387846+06:00 database: disconnecting session #8
+2026-03-13 23:38:18.387846+06:00 database: disconnected session #8
+2026-03-13 23:38:18.387846+06:00 jdbc[9]: 
+/**/conn6.isClosed();
+2026-03-13 23:38:18.388847+06:00 jdbc[9]: 
+/**/conn6.close();
+2026-03-13 23:38:18.388847+06:00 lock: 9 shared read unlock SYS 
+2026-03-13 23:38:18.388847+06:00 database: disconnecting session #9
+2026-03-13 23:38:18.388847+06:00 database: disconnected session #9
+2026-03-13 23:38:18.388847+06:00 jdbc[10]: 
+/**/conn7.isClosed();
+2026-03-13 23:38:18.388847+06:00 jdbc[10]: 
+/**/conn7.close();
+2026-03-13 23:38:18.389845+06:00 lock: 10 shared read unlock SYS 
+2026-03-13 23:38:18.389845+06:00 database: disconnecting session #10
+2026-03-13 23:38:18.389845+06:00 database: disconnected session #10
+2026-03-13 23:38:18.389845+06:00 jdbc[11]: 
+/**/conn8.isClosed();
+2026-03-13 23:38:18.389845+06:00 jdbc[11]: 
+/**/conn8.close();
+2026-03-13 23:38:18.389845+06:00 lock: 11 shared read unlock SYS 
+2026-03-13 23:38:18.389845+06:00 database: disconnecting session #11
+2026-03-13 23:38:18.390846+06:00 database: disconnected session #11
+2026-03-13 23:38:18.390846+06:00 jdbc[12]: 
+/**/conn9.isClosed();
+2026-03-13 23:38:18.390846+06:00 jdbc[12]: 
+/**/conn9.close();
+2026-03-13 23:38:18.390846+06:00 lock: 12 shared read unlock SYS 
+2026-03-13 23:38:18.390846+06:00 database: disconnecting session #12
+2026-03-13 23:38:18.391847+06:00 database: closing F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:38:18.391847+06:00 lock: 2 shared read unlock SYS 
+2026-03-13 23:38:18.391847+06:00 lock: 1 shared read unlock SYS 
+2026-03-13 23:38:18.423844+06:00 database: closed
+2026-03-13 23:38:18.424844+06:00 database: disconnected session #12
+2026-03-13 23:38:29.842180+06:00 database: opening F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb (build 232)
+2026-03-13 23:38:29.944140+06:00 lock: 1 exclusive requesting for SYS 
+2026-03-13 23:38:29.945140+06:00 lock: 1 exclusive added for SYS 
+2026-03-13 23:38:30.037136+06:00 lock: 1 exclusive unlock SYS 
+2026-03-13 23:38:30.042175+06:00 database: opened F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:38:30.044170+06:00 database: connecting session #3 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:38:30.047137+06:00 jdbc[3]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:38:30.048139+06:00 jdbc[3]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:38:30.048139+06:00 jdbc[3]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:38:30.049144+06:00 jdbc[3]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:38:30.050135+06:00 jdbc[3]: 
+/**/Connection conn0 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:38:30.051136+06:00 jdbc[3]: 
+/**/conn0.isReadOnly();
+2026-03-13 23:38:30.057132+06:00 jdbc[3]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:38:30.058133+06:00 jdbc[3]: 
+/**/conn0.getAutoCommit();
+2026-03-13 23:38:30.061133+06:00 jdbc[3]: 
+/**/conn0.isValid(5);
+2026-03-13 23:38:30.061133+06:00 jdbc[3]: 
+/**/conn0.getTransactionIsolation();
+2026-03-13 23:38:30.061133+06:00 jdbc[3]: 
+/**/conn0.getTransactionIsolation();
+2026-03-13 23:38:30.074132+06:00 jdbc[3]: 
+/**/DatabaseMetaData dbMeta0 = conn0.getMetaData();
+2026-03-13 23:38:30.079168+06:00 jdbc[3]: 
+/**/dbMeta0.getDatabaseProductName();
+2026-03-13 23:38:30.079168+06:00 jdbc[3]: 
+/**/dbMeta0.getDatabaseProductVersion();
+2026-03-13 23:38:30.080168+06:00 jdbc[3]: 
+/**/dbMeta0.getDatabaseMajorVersion();
+2026-03-13 23:38:30.080168+06:00 jdbc[3]: 
+/**/dbMeta0.getDatabaseMinorVersion();
+2026-03-13 23:38:30.080168+06:00 jdbc[3]: 
+/**/dbMeta0.getDatabaseProductVersion();
+2026-03-13 23:38:30.081131+06:00 jdbc[3]: 
+/**/dbMeta0.getDatabaseMajorVersion();
+2026-03-13 23:38:30.081131+06:00 jdbc[3]: 
+/**/dbMeta0.getDatabaseMinorVersion();
+2026-03-13 23:38:30.081131+06:00 jdbc[3]: 
+/**/dbMeta0.getDriverName();
+2026-03-13 23:38:30.081131+06:00 jdbc[3]: 
+/**/dbMeta0.getDriverMajorVersion();
+2026-03-13 23:38:30.081131+06:00 jdbc[3]: 
+/**/dbMeta0.getDriverMinorVersion();
+2026-03-13 23:38:30.081131+06:00 jdbc[3]: 
+/**/dbMeta0.getSQLKeywords();
+2026-03-13 23:38:30.105167+06:00 jdbc[3]: 
+/**/dbMeta0.supportsCatalogsInTableDefinitions();
+2026-03-13 23:38:30.105167+06:00 jdbc[3]: 
+/**/dbMeta0.supportsSchemasInTableDefinitions();
+2026-03-13 23:38:30.107165+06:00 jdbc[3]: 
+/**/dbMeta0.storesLowerCaseIdentifiers();
+2026-03-13 23:38:30.107165+06:00 jdbc[3]: 
+/**/dbMeta0.storesUpperCaseIdentifiers();
+2026-03-13 23:38:30.107165+06:00 jdbc[3]: 
+/**/dbMeta0.storesMixedCaseIdentifiers();
+2026-03-13 23:38:30.107165+06:00 jdbc[3]: 
+/**/dbMeta0.storesUpperCaseIdentifiers();
+2026-03-13 23:38:30.108167+06:00 jdbc[3]: 
+/**/dbMeta0.storesLowerCaseQuotedIdentifiers();
+2026-03-13 23:38:30.108167+06:00 jdbc[3]: 
+/**/dbMeta0.storesUpperCaseQuotedIdentifiers();
+2026-03-13 23:38:30.108167+06:00 jdbc[3]: 
+/**/dbMeta0.storesMixedCaseQuotedIdentifiers();
+2026-03-13 23:38:30.109165+06:00 jdbc[3]: 
+/**/conn0.getCatalog();
+2026-03-13 23:38:30.113163+06:00 jdbc[3]: 
+/*SQL #:1*/CALL DATABASE();
+2026-03-13 23:38:30.113163+06:00 jdbc[3]: 
+/**/dbMeta0.supportsNamedParameters();
+2026-03-13 23:38:30.114163+06:00 jdbc[3]: 
+/**/dbMeta0.supportsResultSetType(1004);
+2026-03-13 23:38:30.114163+06:00 jdbc[3]: 
+/**/dbMeta0.supportsGetGeneratedKeys();
+2026-03-13 23:38:30.114163+06:00 jdbc[3]: 
+/**/dbMeta0.supportsBatchUpdates();
+2026-03-13 23:38:30.114163+06:00 jdbc[3]: 
+/**/dbMeta0.dataDefinitionIgnoredInTransactions();
+2026-03-13 23:38:30.114163+06:00 jdbc[3]: 
+/**/dbMeta0.dataDefinitionCausesTransactionCommit();
+2026-03-13 23:38:30.114163+06:00 jdbc[3]: 
+/**/dbMeta0.getSQLStateType();
+2026-03-13 23:38:30.116165+06:00 jdbc[3]: 
+/**/conn0.getSchema();
+2026-03-13 23:38:30.116165+06:00 jdbc[3]: 
+/**/conn0.getSchema();
+2026-03-13 23:38:30.116165+06:00 jdbc[3]: 
+/**/dbMeta0.supportsNamedParameters();
+2026-03-13 23:38:30.118165+06:00 jdbc[3]: 
+/**/dbMeta0.getCatalogSeparator();
+2026-03-13 23:38:30.118165+06:00 jdbc[3]: 
+/**/dbMeta0.isCatalogAtStart();
+2026-03-13 23:38:30.120162+06:00 jdbc[3]: 
+/**/DatabaseMetaData dbMeta1 = conn0.getMetaData();
+2026-03-13 23:38:30.120162+06:00 jdbc[3]: 
+/**/dbMeta1.getJDBCMajorVersion();
+2026-03-13 23:38:30.120162+06:00 jdbc[3]: 
+/**/Clob clob0 = conn0.createClob();
+2026-03-13 23:38:30.123161+06:00 jdbc[3]: 
+/**/clob0.free();
+2026-03-13 23:38:30.123161+06:00 jdbc[3]: 
+/**/NClob clob1 = conn0.createNClob();
+2026-03-13 23:38:30.123161+06:00 jdbc[3]: 
+/**/clob1.free();
+2026-03-13 23:38:30.128163+06:00 jdbc[3]: 
+/**/conn0.clearWarnings();
+2026-03-13 23:38:30.168126+06:00 database: connecting session #4 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:38:30.169126+06:00 jdbc[4]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:38:30.169126+06:00 jdbc[4]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:38:30.169126+06:00 jdbc[4]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:38:30.170126+06:00 jdbc[4]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:38:30.170126+06:00 jdbc[4]: 
+/**/Connection conn1 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:38:30.170126+06:00 jdbc[4]: 
+/**/conn1.isReadOnly();
+2026-03-13 23:38:30.170126+06:00 jdbc[4]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:38:30.170126+06:00 jdbc[4]: 
+/**/conn1.getAutoCommit();
+2026-03-13 23:38:30.203124+06:00 database: connecting session #5 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:38:30.203124+06:00 jdbc[5]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:38:30.203124+06:00 jdbc[5]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:38:30.204124+06:00 jdbc[5]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:38:30.204124+06:00 jdbc[5]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:38:30.204124+06:00 jdbc[5]: 
+/**/Connection conn2 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:38:30.204124+06:00 jdbc[5]: 
+/**/conn2.isReadOnly();
+2026-03-13 23:38:30.205137+06:00 jdbc[5]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:38:30.205137+06:00 jdbc[5]: 
+/**/conn2.getAutoCommit();
+2026-03-13 23:38:30.239122+06:00 database: connecting session #6 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:38:30.239122+06:00 jdbc[6]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:38:30.240123+06:00 jdbc[6]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:38:30.240123+06:00 jdbc[6]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:38:30.240123+06:00 jdbc[6]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:38:30.240123+06:00 jdbc[6]: 
+/**/Connection conn3 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:38:30.241122+06:00 jdbc[6]: 
+/**/conn3.isReadOnly();
+2026-03-13 23:38:30.241122+06:00 jdbc[6]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:38:30.241122+06:00 jdbc[6]: 
+/**/conn3.getAutoCommit();
+2026-03-13 23:38:30.278122+06:00 database: connecting session #7 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:38:30.279121+06:00 jdbc[7]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:38:30.288120+06:00 jdbc[7]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:38:30.291121+06:00 jdbc[7]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:38:30.292121+06:00 jdbc[7]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:38:30.293120+06:00 jdbc[7]: 
+/**/Connection conn4 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:38:30.293120+06:00 jdbc[7]: 
+/**/conn4.isReadOnly();
+2026-03-13 23:38:30.293120+06:00 jdbc[7]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:38:30.294121+06:00 jdbc[7]: 
+/**/conn4.getAutoCommit();
+2026-03-13 23:38:30.326118+06:00 database: connecting session #8 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:38:30.326118+06:00 jdbc[8]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:38:30.327118+06:00 jdbc[8]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:38:30.327118+06:00 jdbc[8]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:38:30.327118+06:00 jdbc[8]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:38:30.328118+06:00 jdbc[8]: 
+/**/Connection conn5 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:38:30.328118+06:00 jdbc[8]: 
+/**/conn5.isReadOnly();
+2026-03-13 23:38:30.329118+06:00 jdbc[8]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:38:30.331118+06:00 jdbc[8]: 
+/**/conn5.getAutoCommit();
+2026-03-13 23:38:30.363116+06:00 database: connecting session #9 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:38:30.364117+06:00 jdbc[9]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:38:30.364117+06:00 jdbc[9]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:38:30.365117+06:00 jdbc[9]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:38:30.366117+06:00 jdbc[9]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:38:30.366117+06:00 jdbc[9]: 
+/**/Connection conn6 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:38:30.366117+06:00 jdbc[9]: 
+/**/conn6.isReadOnly();
+2026-03-13 23:38:30.367116+06:00 jdbc[9]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:38:30.367116+06:00 jdbc[9]: 
+/**/conn6.getAutoCommit();
+2026-03-13 23:38:30.400113+06:00 database: connecting session #10 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:38:30.401114+06:00 jdbc[10]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:38:30.402113+06:00 jdbc[10]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:38:30.402113+06:00 jdbc[10]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:38:30.402113+06:00 jdbc[10]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:38:30.403113+06:00 jdbc[10]: 
+/**/Connection conn7 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:38:30.403113+06:00 jdbc[10]: 
+/**/conn7.isReadOnly();
+2026-03-13 23:38:30.403113+06:00 jdbc[10]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:38:30.404113+06:00 jdbc[10]: 
+/**/conn7.getAutoCommit();
+2026-03-13 23:38:30.443110+06:00 database: connecting session #11 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:38:30.444109+06:00 jdbc[11]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:38:30.445110+06:00 jdbc[11]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:38:30.446110+06:00 jdbc[11]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:38:30.447111+06:00 jdbc[11]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:38:30.447111+06:00 jdbc[11]: 
+/**/Connection conn8 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:38:30.449111+06:00 jdbc[11]: 
+/**/conn8.isReadOnly();
+2026-03-13 23:38:30.449111+06:00 jdbc[11]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:38:30.449111+06:00 jdbc[11]: 
+/**/conn8.getAutoCommit();
+2026-03-13 23:38:30.481111+06:00 database: connecting session #12 to F:/JavaTraining/Ostad/JavaProjectOstad/Module-15/securenote/data/securenotedb
+2026-03-13 23:38:30.481111+06:00 jdbc[12]: 
+/*SQL */SET DB_CLOSE_ON_EXIT FALSE;
+2026-03-13 23:38:30.482108+06:00 jdbc[12]: 
+/*SQL */SET AUTO_RECONNECT TRUE;
+2026-03-13 23:38:30.482108+06:00 jdbc[12]: 
+/*SQL */SET TRACE_LEVEL_SYSTEM_OUT 2;
+2026-03-13 23:38:30.483108+06:00 jdbc[12]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2026-03-13 23:38:30.483108+06:00 jdbc[12]: 
+/**/Connection conn9 = DriverManager.getConnection("jdbc:h2:file:./data/securenotedb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=2", "", "");
+2026-03-13 23:38:30.483108+06:00 jdbc[12]: 
+/**/conn9.isReadOnly();
+2026-03-13 23:38:30.484109+06:00 jdbc[12]: 
+/*SQL #:1*/CALL READONLY();
+2026-03-13 23:38:30.484109+06:00 jdbc[12]: 
+/**/conn9.getAutoCommit();
+2026-03-13 23:38:31.257093+06:00 jdbc[3]: 
+/**/conn0.isValid(5);
+2026-03-13 23:38:31.257093+06:00 jdbc[3]: 
+/**/conn0.getTransactionIsolation();
+2026-03-13 23:38:31.257093+06:00 jdbc[3]: 
+/**/DatabaseMetaData dbMeta2 = conn0.getMetaData();
+2026-03-13 23:38:31.257093+06:00 jdbc[3]: 
+/**/dbMeta2.getURL();
+2026-03-13 23:38:31.257093+06:00 jdbc[3]: 
+/**/conn0.clearWarnings();
+2026-03-13 23:40:06.759252+06:00 jdbc[10]: 
+/**/conn7.isValid(5);
+2026-03-13 23:40:06.759252+06:00 jdbc[10]: 
+/**/conn7.getTransactionIsolation();
+2026-03-13 23:40:07.083211+06:00 jdbc[3]: 
+/**/conn0.isValid(5);
+2026-03-13 23:40:07.083211+06:00 jdbc[3]: 
+/**/conn0.getTransactionIsolation();
+2026-03-13 23:40:07.846162+06:00 jdbc[4]: 
+/**/conn1.isValid(5);
+2026-03-13 23:40:07.846162+06:00 jdbc[4]: 
+/**/conn1.getTransactionIsolation();
+2026-03-13 23:40:08.140142+06:00 jdbc[5]: 
+/**/conn2.isValid(5);
+2026-03-13 23:40:08.140142+06:00 jdbc[5]: 
+/**/conn2.getTransactionIsolation();
+2026-03-13 23:40:11.178011+06:00 jdbc[6]: 
+/**/conn3.isValid(5);
+2026-03-13 23:40:11.178011+06:00 jdbc[6]: 
+/**/conn3.getTransactionIsolation();
+2026-03-13 23:40:13.070893+06:00 jdbc[11]: 
+/**/conn8.isValid(5);
+2026-03-13 23:40:13.070893+06:00 jdbc[11]: 
+/**/conn8.getTransactionIsolation();
+2026-03-13 23:40:15.052720+06:00 jdbc[8]: 
+/**/conn5.isValid(5);
+2026-03-13 23:40:15.052720+06:00 jdbc[8]: 
+/**/conn5.getTransactionIsolation();
+2026-03-13 23:40:17.176594+06:00 jdbc[7]: 
+/**/conn4.isValid(5);
+2026-03-13 23:40:17.176594+06:00 jdbc[7]: 
+/**/conn4.getTransactionIsolation();
+2026-03-13 23:40:21.972296+06:00 jdbc[9]: 
+/**/conn6.isValid(5);
+2026-03-13 23:40:21.972296+06:00 jdbc[9]: 
+/**/conn6.getTransactionIsolation();
+2026-03-13 23:40:25.265095+06:00 jdbc[12]: 
+/**/conn9.isValid(5);
+2026-03-13 23:40:25.265095+06:00 jdbc[12]: 
+/**/conn9.getTransactionIsolation();
