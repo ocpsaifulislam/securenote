@@ -1,12 +1,12 @@
 package com.ostad.securenote.service;
 
-
 import com.ostad.securenote.entity.Note;
 import com.ostad.securenote.repository.NoteRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -18,39 +18,25 @@ public class NoteService {
         return noteRepository.save(note);
     }
 
-    public List<Note> getNotesByOwner(String username) {
+    public List<Note> getNotesByUser(String username) {
         return noteRepository.findByOwnerUsername(username);
     }
 
-    public Note getNoteById(Long id) {
+    public Optional<Note> getNoteByIdAndUser(Long id, String username) {
         return noteRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Note not found"));
+                .filter(note -> note.getOwnerUsername().equals(username));
     }
 
-    public Note updateNote(Long id, Note updatedData, String username) {
-        Note note = getNoteById(id);
-        if (!note.getOwnerUsername().equals(username)) {
-            throw new RuntimeException("Access Denied: You do not own this note");
-        }
-        note.setTitle(updatedData.getTitle());
-        note.setContent(updatedData.getContent());
-        return noteRepository.save(note);
+    public void deleteNoteForUser(Long id, String username) {
+        getNoteByIdAndUser(id, username).ifPresent(noteRepository::delete);
     }
 
-    public void deleteNoteAsUser(Long id, String username) {
-        Note note = getNoteById(id);
-        if (!note.getOwnerUsername().equals(username)) {
-            throw new RuntimeException("Access Denied: You do not own this note");
-        }
-        noteRepository.delete(note);
-    }
-
-    // Admin specific methods
-    public List<Note> getAllNotesInSystem() {
+    // Admin Operations
+    public List<Note> getAllNotes() {
         return noteRepository.findAll();
     }
 
-    public void deleteAnyNoteAsAdmin(Long id) {
+    public void adminDeleteNote(Long id) {
         noteRepository.deleteById(id);
     }
 }

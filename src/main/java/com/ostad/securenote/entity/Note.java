@@ -12,14 +12,14 @@ import lombok.NoArgsConstructor;
 public class Note {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id; // Unique Note ID
 
     @Column(nullable = false)
-    private String title;
+    private String title; // Not Null
 
     @Column(nullable = false)
-    private String content;
+    private String content; // Not Null
 
     @Column(nullable = false)
-    private String ownerUsername;
+    private String ownerUsername; // For ownership checks
 }
