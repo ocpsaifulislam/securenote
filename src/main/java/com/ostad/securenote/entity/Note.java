@@ -1,25 +1,34 @@
 package com.ostad.securenote.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.NotBlank;
+import lombok.*;
 
 @Entity
+@Table(name = "notes")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Note {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // Unique Note ID
+    private Long id;
 
+    @NotBlank(message = "Title must not be blank")
     @Column(nullable = false)
-    private String title; // Not Null
+    private String title;
 
-    @Column(nullable = false)
-    private String content; // Not Null
+    @NotBlank(message = "Content must not be blank")
+    @Column(nullable = false, columnDefinition = "TEXT")
+    private String content;
 
+    /**
+     * Stores the username of whoever created this note.
+     * Used for ownership verification.
+     */
+    @NotBlank
     @Column(nullable = false)
-    private String ownerUsername; // For ownership checks
+    private String ownerUsername;
 }
