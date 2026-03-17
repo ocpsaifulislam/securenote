@@ -45,7 +45,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Map<String, Object>> handleBadCredentials(
             BadCredentialsException ex) {
 
-        return buildResponse(HttpStatus.UNAUTHORIZED, "Invalid username or password", null);
+        return buildResponse(HttpStatus.UNAUTHORIZED, "Invalid username or password" + ex.getMessage(), null);
     }
 
     // ─── 403 Access denied ────────────────────────────────────────────────────
