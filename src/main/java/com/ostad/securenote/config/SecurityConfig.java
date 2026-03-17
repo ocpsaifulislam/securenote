@@ -23,6 +23,7 @@ public class SecurityConfig {
 
     private final UserService userService;
     private final PasswordEncoder passwordEncoder; // ✅ inject from PasswordEncoderConfig
+    private final CustomAuthenticationEntryPoint authEntryPoint;
 
 
     @Bean
@@ -33,12 +34,35 @@ public class SecurityConfig {
         return provider;
     }
 
+//    @Bean
+//    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+//        http
+//                .csrf(AbstractHttpConfigurer::disable)
+//                .sessionManagement(session ->
+//                        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+//                .authorizeHttpRequests(auth -> auth
+//                        .requestMatchers(HttpMethod.POST, "/api/auth/register").permitAll()
+//                        .requestMatchers("/h2-console/**").permitAll()
+//                        .requestMatchers("/api/admin/**").hasRole("ADMIN")
+//                        .requestMatchers("/api/notes/**").hasRole("USER")
+//                        .anyRequest().authenticated()
+//                )
+//                .httpBasic(Customizer.withDefaults())
+//                .headers(headers -> headers.frameOptions(frame -> frame.sameOrigin()))
+//                .authenticationProvider(authenticationProvider());
+//
+//        return http.build();
+//    }
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .exceptionHandling(exception -> exception
+                        .authenticationEntryPoint(authEntryPoint) // এই লাইনটি যোগ করুন
+                )
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.POST, "/api/auth/register").permitAll()
                         .requestMatchers("/h2-console/**").permitAll()
