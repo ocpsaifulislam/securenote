@@ -1,13 +1,13 @@
-package com.ostad.securenote;
+package dev.shoaibsuad.securenotetrack;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SecurenoteApplicationTests {
+class SecureNoteApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }

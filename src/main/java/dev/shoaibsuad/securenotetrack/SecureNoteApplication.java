@@ -1,13 +1,13 @@
-package com.ostad.securenote;
+package dev.shoaibsuad.securenotetrack;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SecurenoteApplication {
+public class SecureNoteApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SecurenoteApplication.class, args);
+        SpringApplication.run(SecureNoteApplication.class, args);
     }
 
 }

@@ -1,20 +1,26 @@
-package com.ostad.securenote.entity;
+package dev.shoaibsuad.securenotetrack.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Entity
 @Table(name = "notes")
 @Data
-@NoArgsConstructor
+@Entity
 @AllArgsConstructor
-@Builder
+@NoArgsConstructor
 public class Note {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @SequenceGenerator(
+            name = "note_seq",
+            sequenceName = "note_seq",
+            allocationSize = 1
+    )
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "note_seq")
+    @Column(updatable = false)
+    private Integer id;
 
     @NotBlank(message = "Title must not be blank")
     @Column(nullable = false)
@@ -24,10 +30,6 @@ public class Note {
     @Column(nullable = false, columnDefinition = "TEXT")
     private String content;
 
-    /**
-     * Stores the username of whoever created this note.
-     * Used for ownership verification.
-     */
     @NotBlank
     @Column(nullable = false)
     private String ownerUsername;
