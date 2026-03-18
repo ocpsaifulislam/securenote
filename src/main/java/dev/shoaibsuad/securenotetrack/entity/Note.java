@@ -30,7 +30,6 @@ public class Note {
     @Column(nullable = false, columnDefinition = "TEXT")
     private String content;
 
-    @NotBlank
-    @Column(nullable = false)
     private String ownerUsername;
+
 }

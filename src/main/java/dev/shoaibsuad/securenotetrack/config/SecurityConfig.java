@@ -17,11 +17,12 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth ->
-                        auth.requestMatchers("/api/auth/register/**").permitAll()
-                                .requestMatchers("/api/ping").hasAuthority("user".toUpperCase())
-                                .requestMatchers("/api/ding").hasAuthority("admin".toUpperCase())
-                                .requestMatchers("/api/ring").hasAnyAuthority("user".toUpperCase(), "admin".toUpperCase())
-                                .anyRequest().authenticated()
+                        auth.requestMatchers("/api/auth/register/user").permitAll()
+                                .requestMatchers("/api/auth/register/admin").permitAll()
+                                .requestMatchers("/api/auth/register/all").permitAll()
+                                .requestMatchers("/api/admin/notes").hasAuthority("admin".toUpperCase())
+                                .requestMatchers("/api/admin/notes/").hasAuthority("admin".toUpperCase())
+                                .requestMatchers("/api/notes/**").hasAuthority("user".toUpperCase())                                .anyRequest().authenticated()
                 ).csrf(csrf -> csrf.disable())
                 .httpBasic(Customizer.withDefaults());
         return http.build();
